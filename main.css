@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body h1 {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 33.6%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 44% );
+        row-gap: 5%;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .row {
+        display: block;
+        max-width: 90%;
+    }
+    .col {
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+}
